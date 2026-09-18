@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tobiiiiichi · 保持好奇，持续构建</title>
+<meta name="description" content="tobiiiiichi 的个人主页 —— 关注软件测试、质量保障与工程效率。保持好奇，持续构建。">
+<meta name="author" content="tobiiiiichi">
+<link rel="canonical" href="https://tobiiiiichi.github.io/">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="tobiiiiichi · 保持好奇，持续构建">
+<meta property="og:description" content="关注软件测试、质量保障与工程效率。">
+<meta property="og:url" content="https://tobiiiiichi.github.io/">
+<meta property="og:image" content="https://tobiiiiichi.github.io/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script>
+  // 在首屏渲染前定好主题，避免闪白
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.dataset.theme = saved;
+        return;
+      }
+    } catch (e) {}
+    document.documentElement.dataset.theme =
+      window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  })();
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="backdrop" aria-hidden="true">
+  <span class="blob blob--1"></span>
+  <span class="blob blob--2"></span>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top">
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span class="brand__text">tobiiiiichi</span>
+    </a>
+
+    <nav class="nav__links" aria-label="页面导航">
+      <a href="#about">关于</a>
+      <a href="#skills">技能</a>
+      <a href="#projects">项目</a>
+      <a href="#contact">联系</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深浅色主题">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.6"/><g stroke-linecap="round"><path d="M12 2.6v2.4M12 19v2.4M2.6 12h2.4M19 12h2.4M5.4 5.4l1.7 1.7M16.9 16.9l1.7 1.7M18.6 5.4l-1.7 1.7M7.1 16.9l-1.7 1.7"/></g></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13.4A8.4 8.4 0 1 1 10.6 4a6.9 6.9 0 0 0 9.4 9.4Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ───────── 首屏 ───────── -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__text reveal">
+        <p class="kicker">Hello，我是</p>
+        <!-- 想显示真名的话，把下面这行换成你的名字 -->
+        <h1 class="hero__title">tobiiiiichi</h1>
+        <p class="hero__role">软件测试 · 质量保障 · 工程效率</p>
+        <p class="hero__desc">
+          保持好奇，持续构建。关注软件是否可靠、流程是否省力，
+          也喜欢把重复的事情交给脚本去完成。
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">看看我的项目</a>
+          <a class="btn" href="#contact">联系我</a>
+        </div>
+
+        <ul class="social" aria-label="社交链接">
+          <li>
+            <a href="https://github.com/tobiiiiichi" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:tobiiiiichi@outlook.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="4.6" width="18.4" height="14.8" rx="2.6"/><path d="m3.6 6.6 7.3 5.4a2 2 0 0 0 2.2 0l7.3-5.4"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero__visual reveal" data-delay="1">
+        <div class="avatar">
+          <img id="avatar" src="https://avatars.githubusercontent.com/u/107739543?v=4" alt="tobiiiiichi 的头像" width="260" height="260">
+          <span class="avatar__fallback" aria-hidden="true">t</span>
+        </div>
+        <div class="chip chip--a">保持好奇</div>
+        <div class="chip chip--b">持续构建</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 关于 ───────── -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <p class="section__kicker reveal">关于我</p>
+      <h2 class="section__title reveal">把软件做对，也把流程做顺</h2>
+
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            我在软件质量这条线上工作：从测试计划、测试用例到回归验证，
+            尽量让每一次交付都有据可依，而不是靠感觉。
+          </p>
+          <p>
+            工作之外，我喜欢折腾自己的工具链和小项目。
+            重复的事情能自动化就自动化，能写清楚就不留在脑子里。
+          </p>
+        </div>
+
+        <ul class="facts">
+          <li class="fact reveal" data-delay="1">
+            <span class="fact__icon" aria-hidden="true">🔍</span>
+            <h3>测试与质量</h3>
+            <p>测试设计、缺陷跟踪、回归与验收，让问题在交付前暴露。</p>
+          </li>
+          <li class="fact reveal" data-delay="2">
+            <span class="fact__icon" aria-hidden="true">⚙️</span>
+            <h3>自动化与工具</h3>
+            <p>把重复流程脚本化，用工具换回时间和注意力。</p>
+          </li>
+          <li class="fact reveal" data-delay="3">
+            <span class="fact__icon" aria-hidden="true">📚</span>
+            <h3>文档与规范</h3>
+            <p>写清楚比说清楚更耐用，规范是团队的长期资产。</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 技能 ───────── -->
+  <section class="section section--alt" id="skills">
+    <div class="wrap">
+      <p class="section__kicker reveal">技能与工具</p>
+      <h2 class="section__title reveal">手边常用的东西</h2>
+
+      <div class="skills">
+        <article class="card reveal">
+          <h3>语言</h3>
+          <ul class="tags">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>SQL</li>
+            <li>Bash</li>
+          </ul>
+        </article>
+
+        <article class="card reveal" data-delay="1">
+          <h3>工具链</h3>
+          <ul class="tags">
+            <li>Git</li>
+            <li>Linux</li>
+            <li>Docker</li>
+            <li>VS Code</li>
+            <li>CI / CD</li>
+          </ul>
+        </article>
+
+        <article class="card reveal" data-delay="2">
+          <h3>方向</h3>
+          <ul class="tags">
+            <li>测试自动化</li>
+            <li>接口测试</li>
+            <li>质量保障</li>
+            <li>工程效率</li>
+            <li>技术文档</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 项目 ───────── -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <p class="section__kicker reveal">项目</p>
+      <h2 class="section__title reveal">正在整理中</h2>
+
+      <div class="empty reveal">
+        <p>手上的东西还在收拾，等整理好了会放到这里。</p>
+        <a class="btn btn--primary" href="https://github.com/tobiiiiichi?tab=repositories">去 GitHub 看看</a>
+      </div>
+
+      <!--
+        有项目之后，把上面这段 .empty 换成卡片，想加几个就复制几份：
+
+        <div class="projects">
+          <article class="card project reveal">
+            <h3><a href="https://github.com/tobiiiiichi/仓库名">项目名</a></h3>
+            <p>一句话说明它解决了什么问题。</p>
+            <ul class="tags"><li>Python</li><li>FastAPI</li></ul>
+          </article>
+        </div>
+      -->
+    </div>
+  </section>
+
+  <!-- ───────── 联系 ───────── -->
+  <section class="section section--alt" id="contact">
+    <div class="wrap">
+      <div class="contact reveal">
+        <p class="section__kicker">联系我</p>
+        <h2 class="section__title">有事聊，随时找我</h2>
+        <p class="contact__desc">技术、工具、测试，或者只是随便聊聊，都欢迎。</p>
+
+        <div class="contact__actions">
+          <a class="btn btn--primary" href="mailto:tobiiiiichi@outlook.com">tobiiiiichi@outlook.com</a>
+          <a class="btn" href="https://github.com/tobiiiiichi">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p>© <span id="year">2026</span> tobiiiiichi</p>
+    <p class="footer__note">手写的 HTML / CSS，托管在 GitHub Pages</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
